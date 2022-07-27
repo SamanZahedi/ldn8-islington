@@ -9,7 +9,7 @@ import Teacher from "./component/teacher/Teacher";
 import EditLesson from "./component/teacher/EditLesson";
 import Post from "./component/home/Post";
 import { Route, Routes } from "react-router-dom";
-import { withAuthenticationRequired } from "@auth0/auth0-react";
+import { withAuthenticationRequired, useAuth0 } from "@auth0/auth0-react";
 import "./App.css";
 
 const ProtectedRoute = ({ component, ...args }) => {
@@ -18,6 +18,22 @@ const ProtectedRoute = ({ component, ...args }) => {
 };
 
 const App = () => {
+  const {
+    isLoading,
+    isAuthenticated,
+    error,
+    user,
+    loginWithRedirect,
+    logout,
+  } = useAuth0();
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+  if (error) {
+    return <div>Oops... {error.message}</div>;
+  }
+
   return (
     <>
       <Navbar />
