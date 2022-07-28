@@ -61,7 +61,7 @@ return (
       ))}
       <input
         onClick={addContent}
-        className="submit"
+        className="submit-lesson"
         type="submit"
         value="Add Lesson"
       />

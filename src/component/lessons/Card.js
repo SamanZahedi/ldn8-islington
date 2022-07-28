@@ -8,8 +8,9 @@ const Card = () => {
 
   useEffect(() => {
     axios
-      .get(`https://ldn8-islington.herokuapp.com/lessons`)
+      .get("https://ldn8-islington.herokuapp.com/lessons")
       .then((res) => {
+        console.log("data", res.data);
         setLessons(res.data);
       })
       .catch((error) => console.log(error.message));

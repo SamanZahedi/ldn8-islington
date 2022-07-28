@@ -3,15 +3,18 @@ import RenderLesson from "./RenderLesson";
 import Form from "./Form";
 import AddQuestion from "./AddQuestion";
 import axios from "axios";
+import Search from "./Search";
 
 function Teacher() {
   const [visibleQuestions, setVisibleQuestions] = useState(false);
-    const [visibleLessons, setVisibleLessons] = useState(false);
+  const [visibleLessons, setVisibleLessons] = useState(false);
+  const [allLessons, setAllLessons] = useState([]);
   const [lessons, setLessons] = useState([]);
 
   useEffect(() => {
     axios.get("https://ldn8-islington.herokuapp.com/lessons/").then((res) => {
       setLessons(res.data);
+      setAllLessons(res.data);
     });
   }, []);
 
@@ -32,6 +35,7 @@ function Teacher() {
 
   return (
     <div>
+      <Search lessons={lessons} setLessons={setLessons} allLessons={allLessons}/>
       <h1 style={{ textAlign: "center" }}>Our Expert Teachers</h1>
       <p className="lesson-plan">
         Here you can find a wide range of full lesson plans to use in your
@@ -58,7 +62,7 @@ function Teacher() {
           </p>
         </div>
         {visibleLessons && <Form setLessons={setLessons} />}
-        <div className="wrapper">
+        <div className="lesson-wrapper">
           {lessons.map((lesson, i) => (
             <div className="lesson-card" key={i}>
               <RenderLesson

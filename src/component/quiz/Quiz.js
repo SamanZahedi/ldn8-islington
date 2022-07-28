@@ -86,6 +86,13 @@ const Quiz = () => {
           />
         </div>
       )}
+      {/* <div>
+        {isTeacher && (
+          <button className="btn-1" onClick={() => deleteQuestion()}>
+            Delete
+          </button>
+        )}
+      </div> */}
     </div>
   );
 };
