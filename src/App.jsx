@@ -22,19 +22,19 @@ const App = () => {
     <>
       <Navbar />
       <Routes>
-        <Route
+        {/* <Route
           path="/teacher"
           element={<ProtectedRoute component={Teacher} />}
         />
         <Route
           path="/profile"
           element={<ProtectedRoute component={Profile} />}
-        />
+        /> */}
         <Route path="/" element={<Home />} />
         <Route path="/questions/lessons/:id" element={<Quiz />} />
         <Route path="/lessons" element={<Lessons />} />
         <Route path="/lessons/:id" element={<LessonDetail />} />
-        {/* <Route path="/teacher" element={<Teacher />} /> */}
+        <Route path="/teacher" element={<Teacher />} />
         <Route path="/edit-lesson/:id" element={<EditLesson />} />
         <Route path="/post/:id" element={<Post />} />
       </Routes>

@@ -30,11 +30,11 @@ const Navbar = () => {
             <li>Lessons</li>
           </Link>
           <Link className="link" to="/teacher">
-            <li>Admin</li>
+            <li>Teacher</li>
           </Link>
         </ul>
 
-        <div className="nav-icon">
+        {/* <div className="nav-icon">
           {isAuthenticated ? (
             <button className="log-btn" onClick={() => logout()}>
               Log Out
@@ -44,7 +44,7 @@ const Navbar = () => {
               Log In
             </button>
           )}
-        </div>
+        </div> */}
         <span>
           <div className="hamburger" onClick={handleNav}>
             {!nav ? (
@@ -66,7 +66,7 @@ const Navbar = () => {
                 to="/teacher"
                 style={{ color: "inherit", textDecoration: "inherit" }}
               >
-                <li>Admin</li>
+                <li>Teacher</li>
               </Link>
             </ul>
           </div>
