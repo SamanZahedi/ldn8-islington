@@ -5,20 +5,9 @@
   flex-wrap: wrap;
 }
 
-.card {
+@media screen and (max-width: 400px) {
+  .card-container {
+  padding: 50px 10px;
+}
 }
 
-.title {
-}
-
-.image-card {
-}
-
-.desc {
-}
-
-.cardButton {
-}
-
-.link {
-}

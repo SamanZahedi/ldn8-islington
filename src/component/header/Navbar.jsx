@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
-//import { BsPerson } from "react-icons/bs";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import "./Navbar.css";
-
-// import Profile from "../components/Profile";
 
 const Navbar = () => {
   const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
@@ -71,16 +68,6 @@ const Navbar = () => {
             </ul>
           </div>
         </span>
-        {/* <Link className="link" to="/Profile">
-          {isAuthenticated ? <p>{user.name}</p> : null}
-          My Profile
-        </Link>
-
-        {isAuthenticated ? (
-          <button onClick={() => logout()}>Log Out</button>
-        ) : (
-          <button onClick={() => loginWithRedirect()}>Login</button>
-        )} */}
       </div>
     </div>
   );

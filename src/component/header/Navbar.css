@@ -41,12 +41,7 @@ li {
   display: none;
 }
 
-/* .nav-icon {
-  padding: 0 100px;
-} */
-
 .icon {
-  /* font-size: 1.5rem; */
   cursor: pointer;
 }
 .log-btn {
@@ -95,5 +90,12 @@ li {
 
   .hamburger {
     display: block;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .logo h2 {
+    font-size: small;
   }
 }
