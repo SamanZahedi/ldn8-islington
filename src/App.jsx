@@ -8,7 +8,7 @@ import LessonDetail from "./component/lessons/LessonDetail";
 import Teacher from "./component/teacher/Teacher";
 import EditLesson from "./component/teacher/EditLesson";
 import Post from "./component/home/Post";
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { withAuthenticationRequired } from "@auth0/auth0-react";
 import "./App.css";
 
