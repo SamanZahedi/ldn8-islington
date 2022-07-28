@@ -1,4 +1,4 @@
-import { appBarClasses } from "@mui/material";
+//import { appBarClasses } from "@mui/material";
 import axios from "axios";
 import { useState } from "react";
 import "./addQuestion.css";
@@ -30,10 +30,10 @@ function AddQuestion() {
   const handleRadioChange = (event, names) => {
     setValues({
       ...values,
-      ["isCorrect_1"]: false,
-      ["isCorrect_2"]: false,
-      ["isCorrect_3"]: false,
-      ["isCorrect_4"]: false,
+      'isCorrect_1': false,
+      'isCorrect_2': false,
+      'isCorrect_3': false,
+      'isCorrect_4': false,
       [names]: event.target.checked,
     });
   };

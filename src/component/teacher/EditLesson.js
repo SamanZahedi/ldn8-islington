@@ -4,7 +4,7 @@ import "./Form.css";
 
 function EditLesson() {
   const [questions, setQuestions] = useState([]);
-   const [load, setLoad] = useState(false);
+  const [load, setLoad] = useState(false);
   const [inputs, setInputs] = useState({
     title: "",
     img_url: "",
@@ -24,15 +24,13 @@ function EditLesson() {
     setInputs({ ...inputs, [names]: event.target.value });
     console.log(inputs);
   };
-  const handleDelete=(Qid)=>{
-    axios.delete(`https://ldn8-islington.herokuapp.com/questions/${Qid}`).then(
-      () => {
+  const handleDelete = (Qid) => {
+    axios
+      .delete(`https://ldn8-islington.herokuapp.com/questions/${Qid}`)
+      .then(() => {
         setLoad(true);
-      },
-      []
-    );
-
-  }
+      }, []);
+  };
   const editContent = (event) => {
     event.preventDefault();
     alert("You have submitted the edited form.");
@@ -42,18 +40,15 @@ function EditLesson() {
       .then(() => (window.location = "/teacher"));
   };
 
-    useEffect(() => {
-      axios
-        .get(`https://ldn8-islington.herokuapp.com/lessons/${lesson_id}`)
-        .then(
-          (res) => {
-            setInputs(res.data[0]);
-          },
-          [lesson_id]
-        );
-    }, []);
+  useEffect(() => {
+    axios
+      .get(`https://ldn8-islington.herokuapp.com/lessons/${lesson_id}`)
+      .then((res) => {
+        setInputs(res.data[0]);
+      });
+  }, [lesson_id]);
 
-    useEffect(() => {
+  useEffect(() => {
     axios
       .get(
         `https://ldn8-islington.herokuapp.com/questions/lessons/${lesson_id}`
@@ -64,9 +59,7 @@ function EditLesson() {
         },
         [lesson_id]
       );
-  }, [load]);
-
-  
+  }, [lesson_id, load]);
 
   return (
     <form onSubmit={editContent}>
@@ -95,7 +88,7 @@ function EditLesson() {
         value={inputs.summary}
         onChange={(event) => handleInputChange(event, "summary")}
       />
-      <input
+      <textarea
         placeholder="Content"
         type="text"
         value={inputs.content}
@@ -127,6 +120,3 @@ function EditLesson() {
 }
 
 export default EditLesson;
-/*
-
-*/
