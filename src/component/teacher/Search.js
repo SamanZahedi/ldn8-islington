@@ -13,7 +13,7 @@ function Search({ lessons, setLessons, allLessons }) {
       <input
         className="search"
         type="text"
-        style={{width:"20%", marinRight:"1px"}}
+        style={{maxWidth:"25%", marginRight:"1px"}}
         placeholder="Search here..."
         onChange={(event) => {
           setLessons(
