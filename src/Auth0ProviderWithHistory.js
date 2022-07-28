@@ -17,6 +17,7 @@ export const Auth0ProviderWithHistory = ({ children }) => {
       domain={domain}
       clientId={clientId}
       redirectUri={`${window.location.origin}/teacher`}
+      // redirectUri={`${window.location.origin}/profile`}
       // redirectUri={window.location.origin}
       onRedirectCallback={onRedirectCallback}
     >

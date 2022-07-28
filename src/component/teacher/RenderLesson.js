@@ -6,7 +6,7 @@ const RenderLesson = ({ lesson, isTeacher, deleteLessons }) => {
   const [readMore, setReadMore] = useState(false);
   const content = (
     <div>
-      <p className="content">{lesson.content}</p>
+      <p className="content">{lesson.content.slice(0, 30)}</p>
     </div>
   );
   const WholeContent = readMore ? "Read Less << " : "Read More >> ";
