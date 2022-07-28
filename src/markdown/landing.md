@@ -30,8 +30,7 @@ Please note, if you are or are supporting a child or young person who is an asyl
 
 # English
 
-We have a range of online English worksheets available
-<span style="color:#826D01"><a href="https://explorers-islington.netlify.app/lessons"><button name="button" style = "color: #826D01" onclick="http://www.google.com">Go to lessons</button></a></span>
+We have a range of online English lessons available
 
 # Timetable of activities
 
