@@ -28,7 +28,7 @@ const Home = () => {
       <div className="showcase">
         <div className="container">
           <h1>Islington Centre for Refugees and Migrants</h1>
-          <p class="lead hide-on-small">
+          <p className="lead hide-on-small">
             Welcoming and supporting Refugees, Asylum seekers, and migrants in
             our community
           </p>
