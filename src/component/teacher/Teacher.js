@@ -34,8 +34,16 @@ function Teacher() {
 
   return (
     <div>
-      <Search lessons={lessons} setLessons={setLessons} allLessons={allLessons}/>
-      <h1 style={{ textAlign: "center" }}>Our Expert Teachers</h1>
+      <Search
+        lessons={lessons}
+        setLessons={setLessons}
+        allLessons={allLessons}
+      />
+      <h1 className="T-title" style={{ textAlign: "center" }}>
+        <span className="title-text text-1">Our</span>
+        <span className="title-text text-2"> Expert </span>
+        <span className="title-text text-3">Teachers</span>
+      </h1>
       <p className="lesson-plan">
         Here you can find a wide range of full lesson plans to use in your
         secondary classroom. All of our lessons are designed around themes

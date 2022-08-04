@@ -9,7 +9,7 @@
 .lesson-card {
   background-color: #e8f2f7;
   text-align: center;
-  padding: 3px;
+  /* padding: 3px; */
 }
 .summary,
 .intro {
@@ -46,6 +46,8 @@ iframe {
 }
 @media only screen and (max-width: 600px) {
  .lesson-card{
+
+
 
  }
 }

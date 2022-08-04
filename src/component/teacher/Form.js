@@ -50,7 +50,7 @@ function Form({ setLessons }) {
       <>
         {Object.entries(inputs).map((items, index) => (
           <div key={index}>
-            <textarea
+            <input
               placeholder={toTitles(items.toString())}
               type="text"
               onChange={(event) =>

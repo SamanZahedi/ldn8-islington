@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="navbar">
         <div className="logo">
           <Link className="link" to="/">
-            <h2>Islington Centre Learning Portal</h2>
+            <h2 className="title">Islington Centre Learning Portal</h2>
           </Link>
         </div>
 
@@ -24,10 +24,10 @@ const Navbar = () => {
             {isAuthenticated ? <li>Welcome {user.name}</li> : null}
           </Link>
           <Link className="link" to="/lessons">
-            <li>Lessons</li>
+            <li className="lesson-link">Lessons</li>
           </Link>
           <Link className="link" to="/teacher">
-            <li>Teacher</li>
+            <li className="teacher-link">Teacher</li>
           </Link>
         </ul>
 
